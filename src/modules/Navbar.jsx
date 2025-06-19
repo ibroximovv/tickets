@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { LogoIcon } from '../assets/icons'
-import { NavList } from '../hooks/useRoutes'
+import { navList } from '../hooks/useRoutes'
 import NavItem from '../components/NavItem'
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
             </Link>
         </div>
         <nav className='flex flex-col'>
-            {NavList.map(item => <NavItem key={item.id} item={item}/>)}
+            {navList.map(item => <NavItem key={item.id} item={item}/>)}
         </nav>
     </div>
   )

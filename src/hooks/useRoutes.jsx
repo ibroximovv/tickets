@@ -1,5 +1,6 @@
 import { AgentsIcon, ArticlesIcon, ContactsIcon, IdeasIcon, OverviewIcon, SettingsIcon, SubscriptionIcon, TicketsIcon } from '../assets/icons/index'
 import { Agents, Articles, Contacts, Ideas, Overview, Settings, Subscription, TicketCreate, Tickets } from '../pages'
+import TicketsMore from '../pages/TicketsMore'
 
 export const paths = {
     overview: '/',
@@ -10,10 +11,12 @@ export const paths = {
     articles: '/articles',
     settings: '/settings',
     subscription: '/subscription',
-    ticketCreate: '/tickets/create'
+    ticketCreate: '/tickets/create',
+    ticketsEdit: "/tickets/:id/edit",
+    ticketsMore:"/tickets/:id"
 }
 
-export const NavList = [
+export const navList = [
     {
         id: 1,
         title: 'Overview',
@@ -86,6 +89,16 @@ export const PageRoutesList = [
     {
         id: 7,
         path: paths.ticketCreate,
+        element: <TicketCreate />
+    },
+    {
+        id: 8,
+        path: paths.ticketsMore,
+        element: <TicketsMore />
+    },
+    {
+        id: 9,
+        path: paths.ticketsEdit,
         element: <TicketCreate />
     }
 
